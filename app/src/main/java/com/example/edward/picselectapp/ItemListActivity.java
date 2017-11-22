@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.edward.picselectapp.dummy.DummyContent;
@@ -95,7 +94,7 @@ public class ItemListActivity extends AppCompatActivity {
         public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mItem = mValues.get(position);
             //holder.mIdView.setText(mValues.get(position).id);
-            holder.mIdView.setImageResource(imageID[Integer.parseInt(mValues.get(position).id)]);
+//            holder.mIdView.setImageResource(imageID[Integer.parseInt(mValues.get(position).id)]);
             holder.mContentView.setText(mValues.get(position).content);
 
             holder.mView.setOnClickListener(new View.OnClickListener() {
@@ -127,14 +126,14 @@ public class ItemListActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
             public final View mView;
-            public final ImageView mIdView;
+//            public final ImageView mIdView;
             public final TextView mContentView;
             public DummyContent.DummyItem mItem;
 
             public ViewHolder(View view) {
                 super(view);
                 mView = view;
-                mIdView = (ImageView) view.findViewById(R.id.id_text);
+//                mIdView = (ImageView) view.findViewById(R.id.id_text);
                 mContentView = (TextView) view.findViewById(R.id.content);
             }
 

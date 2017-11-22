@@ -14,6 +14,24 @@ import java.util.Map;
  * TODO: Replace all uses of this class before publishing your app.
  */
 public class DummyContent {
+
+
+    static String[] list =
+            {
+                    "Australia",
+                    "Brazil",
+                    "China",
+                    "France",
+                    "Germany",
+                    "India",
+                    "Ireland",
+                    "Italy",
+                    "Mexico",
+                    "Poland",
+                    "Russia",
+                    "Spain",
+                    "US"
+            };
     static Integer[] imageID =
             {
                     R.drawable.flag_australia,
@@ -56,10 +74,11 @@ public class DummyContent {
     }
 
     private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position-1), "", makeDetails(position));
+        return new DummyItem(String.valueOf(position-1), "Flag of "+list[position-1], makeDetails(position));
     }
 
     private static Integer makeDetails(int position) {
+
         return imageID[position-1];
     }
 
